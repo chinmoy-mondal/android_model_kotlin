@@ -12,15 +12,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val cityNames = arrayOf("monisha","sarmistha","chinmoy","chayon","srabonti","sarmistha","chinmoy","chayon","srabonti","sarmistha","chinmoy","chayon","srabonti")
-        val cities:ListView = findViewById(R.id.cities)
-        val cityAdapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,cityNames)
-
+        val cityData = arrayOf(
+            City("India","New Delhi"),
+            City("USA","New York"),
+            City("France","Paris"),
+            City("Italy","Rome"),
+            City("Netherland","Amsterdam-hello"),
+        )
+        val cities = findViewById<ListView>(R.id.cities)
+        val cityAdapter = CityAdapter(cityData)
         cities.adapter = cityAdapter
-
-        cities.setOnItemClickListener { adapterView, view, position, id ->
-            val city:TextView = view as TextView
-            Toast.makeText(this,city.text,Toast.LENGTH_SHORT).show()
-        }
     }
 }

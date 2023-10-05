@@ -1,11 +1,3 @@
 package com.example.mobileapp
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-
-class City : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_city)
-    }
-}
+data class City(val country:String, val name: String)
