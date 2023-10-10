@@ -7,7 +7,7 @@ import android.widget.ListView
 import android.widget.TextView
 import android.widget.Toast
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() { 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
             City("USA","New York"),
             City("France","Paris"),
             City("Italy","Rome"),
-            City("Netherland","Amsterdam-hello"),
+            City("Netherlands","Amsterdam-hello"),
         )
         val cities = findViewById<ListView>(R.id.cities)
         val cityAdapter = CityAdapter(cityData)
